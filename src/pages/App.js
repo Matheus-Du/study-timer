@@ -27,14 +27,22 @@ function App() {
   }, [isRunning, setRunning]);
 
   return (
-    <div className='timer'>
-      <div className='time'>
-        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
-        <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+    <div className='App-header'>
+      <div className='navBar'>
+        <p>Points: {Math.floor(time/60000)}</p>
       </div>
-      <div className='timeControl'>
-        <button onClick={() => setRunning(!isRunning)}>{isRunning ? 'Pause' : 'Start'}</button>
-        <button onClick={() => resetTimer()}>End</button>
+      <div className='header'>
+        <h2>Timer App</h2>
+      </div>
+      <div className='timer'>
+        <div className='time'>
+          <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
+          <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
+        </div>
+        <div className='timeControl'>
+          <button className='timerButton' onClick={() => setRunning(!isRunning)}>{isRunning ? 'Pause' : 'Start'}</button>
+          <button className='timerButton' onClick={() => resetTimer()}>End</button>
+        </div>
       </div>
     </div>
   );
