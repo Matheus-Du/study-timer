@@ -11,6 +11,9 @@ function App() {
     setRunning(false);
   }
 
+  /* useEffect is the same as componentDidUpdate & allows us to update the timer in the ui.
+    if the timer is running, setInterval executes the setTime method every second and adds a second to the time 
+    if the timer isn't running or the useEffect function ends, clear the interval */
   useEffect(() => {
     var interval = null;
     if(isRunning) {
@@ -24,14 +27,14 @@ function App() {
   }, [isRunning, setRunning]);
 
   return (
-    <div className="stopwatch">
-      <div className="numbers">
+    <div className='timer'>
+      <div className='time'>
         <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
         <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>
       </div>
-      <div className="buttons">
-        <button onClick={() => setRunning(!isRunning)}>Start</button>
-        <button onClick={() => resetTimer()}>End</button>       
+      <div className='timeControl'>
+        <button onClick={() => setRunning(!isRunning)}>{isRunning ? 'Pause' : 'Start'}</button>
+        <button onClick={() => resetTimer()}>End</button>
       </div>
     </div>
   );
