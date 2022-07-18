@@ -36,10 +36,7 @@ function App() {
 
   return (
     <div className='App-header'>
-      <NavHeader />
-      <div className='navBar'>
-        <p>Points: {points}</p>
-      </div>
+      <NavHeader currentPoints = {points}/>
       <div className='header'>
         <h2>Timer App</h2>
       </div>
