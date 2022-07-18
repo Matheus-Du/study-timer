@@ -1,4 +1,3 @@
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -9,7 +8,6 @@ function NavHeader() {
 
     return (
         <Navbar sticky='top' bg="light" variant='light' expand="lg">
-          <Container>
             <Navbar.Brand href="#home">
                 <img
                     src={logo}
@@ -20,7 +18,7 @@ function NavHeader() {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
+              <Nav className="ml-auto">
                 <Nav.Link href="#home">Home</Nav.Link>
                 <Nav.Link href="#rewards">Rewards</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">
@@ -36,7 +34,6 @@ function NavHeader() {
                 </NavDropdown>
               </Nav>
             </Navbar.Collapse>
-          </Container>
         </Navbar>
       );
 }
