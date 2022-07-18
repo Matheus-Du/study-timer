@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import NavHeader from '../components/NavHeader';
 import '../css/App.css';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className='App-header'>
+      <NavHeader />
       <div className='navBar'>
         <p>Points: {points}</p>
       </div>
