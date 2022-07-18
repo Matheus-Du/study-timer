@@ -10,10 +10,16 @@
     margin-left: 20px;
 }
 
-.name {
-    font-size: 40px;
+#brand {
+    font-size: 30px;
 }
 
 .nav-link {
-    font-size: 30px;
+    text-align: center;
+}
+
+#point-counter {
+    color: black;
+    font-size: 16px;
+    margin-right: 20px;
 }
