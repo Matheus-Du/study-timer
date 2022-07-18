@@ -1,6 +1,19 @@
-.custom-logo {
-    height: 30px;
-    width: 30px;
+.navbar {
+    background-color: #8ad4d1;
+    padding: 0px;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
     margin-right: 5px;
     margin-left: 20px;
+}
+
+.name {
+    font-size: 30px;
+}
+
+.nav-link {
+    font-size: 20px;
 }
